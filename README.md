@@ -1,2 +1,1 @@
-# simple-lamp-docker-compose
-Simple LAMP Docker Compose
+Simple LAMP Docker Compose with PHPMyAdmin
