@@ -1,6 +1,6 @@
 services:
   www:
-    build: ./docker-images/php-apache
+    build: ./docker/php-apache
     volumes:
       - .:/var/www/html
     ports:
