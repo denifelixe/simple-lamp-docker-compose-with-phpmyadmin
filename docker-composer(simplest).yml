@@ -1,0 +1,37 @@
+services:
+  www:
+    image: php:apache
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8080:80
+    networks:
+      - lamp
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: project
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - lamp
+  phpmyadmin:
+    image: phpmyadmin:latest
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - 8081:80
+    depends_on:
+      - mysql
+    networks:
+      - lamp
+volumes:
+  mysql_data:
+    driver: local
+networks:
+  lamp:
+    driver: bridge
