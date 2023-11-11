@@ -9,6 +9,8 @@ Put `docker-compose.yml` and `docker` folder to your working directory.
 
 Run with `docker compose up` with your WSL Linux Distribution (You can use Windows Terminal or VS Code Terminal and select Your WSL Linux Distribution)
 
+Run `docker compose down` to purge the container after stopping it with ctrl+c
+
 Source:
 
 https://www.evernote.com/shard/s679/sh/3008d87a-55be-26df-efda-0a0b913edcbd/Paf2SSGi8coehglH0IJ-0cY2Bo2HedzZcGIRQmUsh800Jf29neD2HcNJLg
